@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2020, The TurtleCoin Developers
-//
+// Copyright (c) 2020-2020, The Rockcoin Developers 
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -26,9 +26,9 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 3914525;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xcb;
 
-        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 40;
+        const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 20;
 
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT = 60 * 60 * 2;
 
@@ -174,16 +174,16 @@ namespace CryptoNote
 
         const uint64_t MAX_EXTRA_SIZE = 140000;
 
-        const uint64_t MAX_EXTRA_SIZE_V2 = 1024;
+        const uint64_t MAX_EXTRA_SIZE_V2 = 10000;
 
         const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT = 1300000;
 
-        /* 25 trillion atomic, or 250 billion TRTL -> Max supply / mixin+1 outputs */
+        /* 25 trillion atomic, or 250 billion ROCK -> Max supply / mixin+1 outputs */
         /* This is enforced on the daemon side. An output > 250 billion causes
          * an invalid block. */
         const uint64_t MAX_OUTPUT_SIZE_NODE   = 250'000'000'000'00;
 
-        /* 100 billion atomic, or 1 billion TRTL */
+        /* 100 billion atomic, or 1 billion ROCK */
         /* This is enforced on the client side. An output > 1 billion will not
          * be created in a transaction */
         const uint64_t MAX_OUTPUT_SIZE_CLIENT = 1'000'000'000'00;
@@ -389,8 +389,8 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9}};
-
+        {0xe8, 0x42, 0xa5, 0xcf, 0x6c, 0x69, 0x39, 0x57, 0x65, 0xf9, 0x91, 0x4a, 0xb6, 0xc1, 0x0c, 0xb5}}; 
+    
     const char *const SEED_NODES[] = {
         "206.189.142.142:11897", // rock
         "145.239.88.119:11897", // cision
@@ -400,4 +400,4 @@ namespace CryptoNote
         "46.214.70.196:11897", // CuveeRO
         "94.113.119.122:11897" // CuveeCZ
     };
-} // namespace CryptoNote
+} // fix seednodes
