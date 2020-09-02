@@ -41,7 +41,7 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(100000000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(10000000000000);
 
         const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 187000;
 
@@ -55,7 +55,7 @@ namespace CryptoNote
 
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3 = 800000;
 
-        const unsigned EMISSION_SPEED_FACTOR = 25;
+        const unsigned EMISSION_SPEED_FACTOR = 24;
 
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -107,15 +107,15 @@ namespace CryptoNote
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1 = 0;
 
-        const uint64_t MAXIMUM_MIXIN_V1 = 100;
+        const uint64_t MAXIMUM_MIXIN_V1 = 3;
 
-        const uint64_t MINIMUM_MIXIN_V2 = 7;
+        const uint64_t MINIMUM_MIXIN_V2 = 3;
 
-        const uint64_t MAXIMUM_MIXIN_V2 = 7;
+        const uint64_t MAXIMUM_MIXIN_V2 = 3;
 
         const uint64_t MINIMUM_MIXIN_V3 = 3;
 
-        const uint64_t MAXIMUM_MIXIN_V3 = 3;
+        const uint64_t MAXIMUM_MIXIN_V3 = 7;
 
         /* The heights to activate the mixin limits at */
         const uint32_t MIXIN_LIMITS_V1_HEIGHT = 440000;
@@ -166,7 +166,7 @@ namespace CryptoNote
 
         static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
-        const size_t MAX_BLOCK_SIZE_INITIAL = 100000;
+        const size_t MAX_BLOCK_SIZE_INITIAL = 200000;
 
         const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR = 100 * 1024;
 
@@ -303,7 +303,7 @@ namespace CryptoNote
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "TurtleCoin";
+    const char CRYPTONOTE_NAME[] = "Rockcoin";
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
